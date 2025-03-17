@@ -1,11 +1,11 @@
-package com.adrar.cdah2.service;
+package com.example.h2exemple.service;
 
-import com.adrar.cdah2.dto.LivreDto;
-import com.adrar.cdah2.exception.NoLivreFoundException;
-import com.adrar.cdah2.exception.SaveLivreExistException;
-import com.adrar.cdah2.exception.UpdateLivreNotFoundException;
-import com.adrar.cdah2.model.Livre;
-import com.adrar.cdah2.repository.LivreRepository;
+import com.example.h2exemple.dto.LivreDto;
+import com.example.h2exemple.exception.NoLivreFoundException;
+import com.example.h2exemple.exception.SaveLivreExistException;
+import com.example.h2exemple.exception.UpdateLivreNotFoundException;
+import com.example.h2exemple.model.Livre;
+import com.example.h2exemple.repository.LivreRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

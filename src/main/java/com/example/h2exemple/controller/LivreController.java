@@ -3,7 +3,7 @@ package com.example.h2exemple.controller;
 import com.example.h2exemple.dto.LivreDto;
 import com.example.h2exemple.exception.LivreNotFoundException;
 import com.example.h2exemple.model.Livre;
-import com.adrar.cdah2.service.LivreService;
+import com.example.h2exemple.service.LivreService;
 import com.example.h2exemple.repository.LivreRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

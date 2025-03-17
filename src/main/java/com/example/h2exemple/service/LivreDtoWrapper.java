@@ -1,7 +1,7 @@
-package com.adrar.cdah2.service;
+package com.example.h2exemple.service;
 
-import com.adrar.cdah2.dto.LivreDto;
-import com.adrar.cdah2.model.Livre;
+import com.example.h2exemple.dto.LivreDto;
+import com.example.h2exemple.model.Livre;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
