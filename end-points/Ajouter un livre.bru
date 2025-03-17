@@ -1,0 +1,19 @@
+meta {
+  name: Ajouter un livre
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://localhost:9000/api/livre
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "titre":"titre",
+    "description":"description",
+    "datePublication":"2025-03-14"
+  }
+}
