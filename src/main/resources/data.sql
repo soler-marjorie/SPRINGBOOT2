@@ -1,40 +1,29 @@
--- Création de la table
-DROP TABLE IF EXISTS `user`;
+DROP TABLE IF EXISTS utilisateur;
+DROP TABLE IF EXISTS livre;
 
-CREATE TABLE `user` (
-     id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
-     firstname VARCHAR(50) NOT NULL,
-     lastname VARCHAR(50) NOT NULL,
-     email VARCHAR(50) NOT NULL,
-     password VARCHAR(255) NOT NULL
+CREATE TABLE utilisateur (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    firstname VARCHAR(50) NOT NULL,
+    lastname VARCHAR(50) NOT NULL,
+    email VARCHAR(50) NOT NULL,
+    password VARCHAR(255) NOT NULL
 );
 
--- Ajout d'enregistements
-INSERT INTO `user` (firstname, lastname, email, password) VALUES
-   ('Mathieu', 'Mithridate', 'mathieumith@test.com', '1234'),
-   ('Jean', 'Albert', 'jeanalbert@test.fr', '1234'),
-   ('Marie', 'Durand', 'mariedurand@mail.com', '1234');
+CREATE TABLE livre(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    titre VARCHAR(50) NOT NULL,
+    description VARCHAR(255) NOT NULL,
+    date_publication DATE NOT NULL
+);
 
+INSERT INTO utilisateur (firstname, lastname, email, password) VALUES
+('Mathieu', 'Mithridate', 'mathieumith@test.com', '1234'),
+('Jean', 'Albert', 'jeanalbert@test.fr', '1234'),
+('Marie', 'Durand', 'mariedurand@mail.com', '1234');
 
--- Exemple création d'un compte :
+INSERT INTO livre (titre, description, date_publication) VALUES
+('Le Petit Prince', 'Un conte poétique et philosophique', '1943-04-06'),
+('1984', 'Un roman dystopique sur un futur totalitaire', '1949-06-08'),
+('Le Meilleur des mondes', 'Un roman de science-fiction sur une société futuriste', '1932-08-31');
+
 CREATE USER test PASSWORD '1234' ADMIN;
-
-
-
--- Création de la table
-DROP TABLE IF EXISTS book;
-
-CREATE TABLE book (
-      id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
-      titre VARCHAR(50) UNIQUE NOT NULL,
-      description VARCHAR(255) NOT NULL,
-      datePublication DATE NOT NULL
-);
-
--- Ajout d'enregistements
-INSERT INTO book (titre, description, datePublication) VALUES
-    ('Le savant', 'Histoire d un gars', 10/12/2012),
-    ('Le roi', 'Histoire d un roi', 18/02/2012),
-    ('Le pouilleux', 'Histoire d un pouilleux', 10/12/2015)
-
-
